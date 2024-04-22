@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png'%}">
+
+    <title>Skill Safari | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="{% static 'css/gamestyle.css' %}">
+    <script src="{% static 'js/gamescript.js' %}" defer></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>
+                <span>Rock</span>
+                <span>Paper</span>
+                <span>Scissors</span>
+            </h1>
+            <div class="score-container">
+                <h4>Score</h4>
+                <p id="score">0</p>
+            </div>
+        </header>
+
+        <main id="main">
+
+            <button class="btn-circle btn-paper pick" data-choice="paper">
+                <span class="wrapper">
+                    <img src="{% static 'images/icon-paper.svg' %}" alt="paper icon">
+                </span>
+            </button>
+
+            <button class="btn-circle btn-scissors pick" data-choice="scissors">
+                <span class="wrapper">
+                    <img src="{% static 'images/icon-scissors.svg' %}" alt="scissors icon">
+                </span>
+            </button>
+
+            <button class="btn-circle btn-rock pick" data-choice="rock">
+                <span class="wrapper">
+                    <img src="{% static 'images/icon-rock.svg' %}" alt="rock icon">
+                </span>
+            </button>
+
+        </main>
+
+        <div class="rules-modal" id="modal">
+            <div class="modal">
+                <div class="modal-content">
+                    <img src="{% static 'images/image-rules.svg' %}" alt="rule">
+                    <button id="close"><img src="{% static 'images/icon-close.svg' %}" alt="close">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <button class="btn-rules" id="open">Rules</button>
+
+    </div>
+
+
+    <div class="selection" id="selection">
+        <div>
+            <h2>You picked</h2>
+            <button class="btn-circle btn-paper" id="user_select">
+                <span class="wrapper">
+                    <img src="{% static 'images/icon-paper.svg' %}" alt="paper icon">
+                </span>
+            </button>
+        </div>
+        <div class="go-down">
+            <p class="big-text">You
+                <span id="winner"></span></p>
+            <button class="btn" id="reset">Play again</button>
+        </div>
+        <div>
+            <h2>the House picked</h2>
+            <button class="btn-circle btn-rock" id="computer_select">
+                <span class="wrapper">
+                    <img src="{% static 'images/icon-rock.svg' %}" alt="rock icon">
+                </span>
+            </button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+ 
