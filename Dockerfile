@@ -1,7 +1,6 @@
 # Use a minimal Python image
 FROM python:3.11-slim
 
-VOLUME ["/main/db.sqlite3", "/main/media"]
 
 # Set the working directory in the container
 WORKDIR /main
