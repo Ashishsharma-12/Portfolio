@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   web:
-    image: portfolio
+    image: portfolio_web:latest
     build: .
     ports:
       - "8000:8000"
