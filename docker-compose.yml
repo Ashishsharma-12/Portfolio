@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    image: portfolio
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db.sqlite3:/main/db.sqlite3     # Persist SQLite database file
+      - ./media:/main/media               # Persist media/uploads folder
+    command: ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
