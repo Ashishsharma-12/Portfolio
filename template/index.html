@@ -19,8 +19,8 @@
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
 			            <h1 class="mb-4 mt-3">I'm <span>Ashish Sharma</span></h1>
-			            <h2 class="mb-4">A Workday Techno-Functional Consultant</h2>
-			            <p><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+			            <h2 class="mb-4">AI Engineer</h2>
+			            <p><a href="#contact-section" class="btn btn-primary py-3 px-4">Connect with me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -62,12 +62,12 @@
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<h1 class="big">About</h1>
 		            <h2 class="mb-4">About Me</h2>
-		            <p>An Aspiring Data Scientist and Experienced Workday Consultant</p>
+		            <p>Recent MSc Data Science graduate from the University of East London with experience as a Workday Tech-Functional Consultant at Hitachi Vantara. Seeking AI/ML and Data roles with the right to work in the UK under a graduate visa.</p>
 					<ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Name:</span> <span>Ashish Sharma</span></li>
 		            	<li class="d-flex"><span>Date of birth:</span> <span>August 12, 1999</span></li>
-		            	<li class="d-flex"><span>Address:</span> <span>Tottenham Hale, London, UK</span></li>
-		            	<li class="d-flex"><span>Zip code:</span> <span>N17 9FD</span></li>
+		            	<li class="d-flex"><span>Address:</span> <span>22 Flander Road, London, UK</span></li>
+		            	<li class="d-flex"><span>Zip code:</span> <span>E6 6DU</span></li>
 		            	<li class="d-flex"><span>Email:</span> <span>ashishrsharma99@gmail.com</span></li>
 		            	<li class="d-flex"><span>Phone: </span> <span>+44-7586475551</span></li>
 		            </ul>
@@ -79,7 +79,7 @@
 	                <span class="number" data-number="{{len_prj}}">0</span>
 	                <span>Project Completed</span>
                 </p>
-                <p><a href="{% static 'AshishSharma_CV.pdf' %}" target="_blank" class="btn btn-primary py-3 px-3">Download CV</a></p>
+                <p><a href="{% static 'Ashish_Sharma_CV_updated.pdf' %}" target="_blank" class="btn btn-primary py-3 px-3">Download CV</a></p>
               </div>
 	          </div>
 	        </div>
@@ -90,16 +90,16 @@
     <section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
 			<div class="row justify-content-center pb-5">
-			<div class="col-md-10 heading-section text-center ftco-animate">
-				<h1 class="big big-2">Resume</h1>
-				<h2 class="mb-4">Resume</h2>
-				<p class = "justify-content-center">
-					An aspiring data scientist with a passion for solving real-world business challenges using data analytics, machine learning and Deep learning. 
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p class="justify-content-center" style="text-align: justify;">
+					Recent MSc Data Science graduate from the University of East London with experience as a Workday Tech-Functional Consultant at Hitachi Vantara. 
 					I am proficient in deploying complex machine learning algorithms, statistical modeling techniques, and data visualization tools to identify patterns and extract valuable insights for stakeholders and organizational leadership.
-					I have # years of experience as a techno-functional Workday consultant, and I am currently pursuing a Master's degree in Data Science from the University of East London. 
-					I am seeking full-time opportunities to showcase my diverse skills in Workday Consulting and Data science roles.
-				</p>
-			</div>
+					I have 2.5 years of experience as a techno-functional Workday consultant, and I have recently completed my Master's degree in Data Science from the University of East London with Distinction (89%). 
+					I am seeking full-time opportunities to showcase my diverse skills in Data Science, Data Analysis, and AI/ML roles with the right to work in the UK under a graduate visa.
+					</p>
+				</div>
 			</div>
     		<div class="row">
     			<div class="col-md-12">
@@ -109,7 +109,7 @@
     					<span class="date">{{e.start_year}}-{{e.end_year}}</span>
     					<h2>{{e.degree}}</h2>
     					<span class="position">{{e.college}}</span>
-    					<p class="mt-4">{{e.desc}}.</p>
+    					<p class="mt-4">{{ e.desc|linebreaksbr }}</p>
     				</div>
 				{% endfor %}
 				
@@ -120,19 +120,19 @@
     					<span class="date">{{w.start_year}}-{{w.end_year}}</span>
     					<h2>{{w.job}}</h2>
     					<span class="position">{{w.company}}</span>
-    					<p>{{w.job_desc}}</p>
+    					<p class="mt-4">{{ w.job_desc|linebreaksbr }}</p>
     				</div>
 				{% endfor %}
+				</div>
     			</div>
     		</div>
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 d-flex justify-content-center text-center ftco-animate">
-    				<p><a href="{% static 'AshishSharma_CV.pdf' %}" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    				<p><a href="{% static 'Ashish_Sharma_CV_updated.pdf' %}" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
     			</div>
     		</div>
     	</div>
     </section>
-
     <section class="ftco-section" id="services-section">
     	<div class="container">
     		<div class="row justify-content-center py-5 mt-5">
@@ -149,7 +149,7 @@
 								<i class="flaticon-analysis"></i>
 							</span>
 							<div class="desc">
-								<h3 class="mb-5">Artificial Intelligence</h3>
+								<h3 class="mb-5">AI Engineering</h3>
 							</div>
 						</a>
 					</div>
@@ -169,42 +169,12 @@
 								<i class="flaticon-ideas"></i>
 							</span>
 							<div class="desc">
-								<h3 class="mb-5">Web Developer</h3>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#" class="services-1">
-							<span class="icon">
-								<i class="flaticon-analysis"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">App Developer</h3>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#" class="services-1">
-							<span class="icon">
-								<i class="flaticon-flasks"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Data Analytics</h3>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#" class="services-1">
-							<span class="icon">
-								<i class="flaticon-ideas"></i>
-							</span>
-							<div class="desc">
 								<h3 class="mb-5">Data Science</h3>
 							</div>
 						</a>
 					</div>
 				</div>
+    	</div>
     	</div>
     </section> 
 
@@ -214,7 +184,7 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">My Projects</h2>
-            <p>Dive into my portfolio of innovative projects, showcasing my creativity and problem-solving abilities.</p>
+            <p>Dive into my portfolio of innovative projects, showcasing my creativity and problem-solving abilities in data science and machine learning.</p>
           </div>
         </div>
     	<div class="row">
@@ -242,7 +212,7 @@
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Skills</h1>
 					<h2 class="mb-4">My Skills</h2>
-					<p>Explore my diverse skill set, honed through hands-on experience and continuous learning.</p>
+					<p>Explore my diverse skill set, honed through hands-on experience in data science, machine learning, and enterprise consulting.</p>
 				</div>
         	</div>
 				<div class="row">
@@ -270,7 +240,7 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Certificates</h1>
             <h2 class="mb-4">My Certificates</h2>
-            <p>Dive into my portfolio of innovative projects, showcasing my creativity and problem-solving abilities.</p>
+            <p>Professional certifications and achievements that demonstrate my expertise in data science, machine learning, and technology consulting.</p>
           </div>
         </div>
     	<div class="row">
@@ -363,7 +333,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="100">0</strong>
+                <strong class="number" data-number="5">0</strong>
                 <span>Awards</span>
               </div>
             </div>
@@ -387,7 +357,7 @@
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="500">0</strong>
+                <strong class="number" data-number="2000">0</strong>
                 <span>Cups of coffee</span>
               </div>
             </div>
@@ -400,8 +370,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
-						<h2>I'm <span>Available</span> for freelancing</h2>
-						<p>I would love to have a chat about my skills, experience and services.</p>
+						<h2>I'm <span>Available</span> for full-time opportunities</h2>
+						<p>I would love to have a chat about my skills, experience and services in Data Science and AI/ML roles.</p>
 						{% comment %} <p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-4">Hire me</a></p> {% endcomment %}
 					</div>
 				</div>
@@ -414,7 +384,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
-            <p>Let's Connect and Create Something Amazing Together! Reach out and let's bring your ideas to life.</p>
+            <p>Let's Connect and Create Something Amazing Together! Reach out and let's discuss opportunities in data science and AI.</p>
           </div>
         </div>
 
@@ -504,12 +474,9 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
-              <p>Aspiring data scientist with expertise in machine learning, deep learning, and data visualization. Passionate about leveraging data skills to drive business growth and solve real-world challenges.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="https://www.linkedin.com/in/ashish-rampati-sharma/"><span class="icon-linkedin"></span></a></li>
-                <li class="ftco-animate"><a href="https://github.com/Ashishsharma-12"><span class="icon-github"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/whoisashishhh/"><span class="icon-instagram"></span></a></li>
-              </ul>
+              <p>
+			  MSc Data Science graduate specialising in AI and deep learning, passionate about delivering innovative AI-driven solutions that solve complex challenges and accelerate business success. Authorized to work in the UK.
+			  </p>
             </div>
           </div>
           <div class="col-md">
@@ -528,8 +495,8 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Services</h2>
               <ul class="list-unstyled">
-                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Artificial Intelligence</a></li>
-                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Machine Learning</a></li>
+                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>AI Engineering</a></li>
                 <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Data Science</a></li>
                 <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
                 <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Workday Consulting</a></li>
@@ -540,26 +507,15 @@
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Tottenham Hale, London, Greater London, UK</span></li>
-	                <li><span class="icon icon-phone"></span><span class="text">+44 75864 75551</span></li>
-					<li><span class="icon icon-envelope pr-4"></span><span class="text"> ashishrsharma99@gmail.com</span></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
-    </footer>
+					<ul>
+						<li><span class="icon icon-map-marker"></span><span class="text">London, UK
+					</ul>
+				<div>
+					<ul class="ftco-footer-social d-flex float-md-left float-lft mt-5">
+						<li class="ftco-animate me-3"><a href="https://www.linkedin.com/in/ashish-rampati-sharma/"><span class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate me-3"><a href="https://github.com/Ashishsharma-12"><span class="icon-github"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.instagram.com/whoisashishhh/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				</div>
 
 {% endblock body %}
-  
-

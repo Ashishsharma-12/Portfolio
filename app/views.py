@@ -13,7 +13,7 @@ def homepage(request):
     skills = Skills_Library.objects.all()
     projects = Projects.objects.all()
     edu = Education.objects.all()
-    work = Work_Experience.objects.all()
+    work = Work_Experience.objects.all().order_by('-end_year', '-start_year')
     cert = Certifications.objects.all()
     form = ContactForm()
 
@@ -38,8 +38,8 @@ def contact(request):
             query.save()
             try:
                 send_mail(
-                    'Contact Form Submission',
-                    f'Name: {fname}\nEmail: {femail}\nSubject: {fsub}\nMessage: {fmsg}',
+                    "Contact Form Submission",
+                    f"Name: {fname}\nEmail: {femail}\nSubject: {fsub}\nMessage: {fmsg}",
                     femail,  # Replace with your email
                     ['ashishrsharma99@gmail.com'],  # Replace with recipient email(s)
                     fail_silently=False,
@@ -48,13 +48,14 @@ def contact(request):
             
             except(Exception):
                 print(Exception.with_traceback)
+                return messages.error(request, "Something went wrong. Please try again later.")
         else:
             return messages.danger(request, "Missing required fields.")
 
     skills = Skills_Library.objects.all()
     projects = Projects.objects.all()
     edu = Education.objects.all()
-    work = Work_Experience.objects.all()
+    work = Work_Experience.objects.all().order_by('-end_year', '-start_year')
     cert = Certifications.objects.all()
     form = ContactForm()
     
@@ -63,7 +64,7 @@ def contact(request):
                 'len_prj': len(projects), 'len_cert': len(cert),'form': form
                }
 
-    return render(request,'index.html', context=context)
+    return redirect(request,'index.html', context=context)
 
 
 def rock_paper_sciscor(request):

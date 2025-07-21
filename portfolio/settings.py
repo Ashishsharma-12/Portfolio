@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-ub9z+t^gvo)60zjkx#k*2@mg+!0vx*)a$jf@o3vyd-lq5p042o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["portfolio-u9a6.onrender.com"]
-
+# ALLOWED_HOSTS = ["portfolio-u9a6.onrender.com", "127.0.0.1:8000"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -136,3 +136,7 @@ MESSAGE_TAGS = {
     messages.ERROR : 'danger',
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587

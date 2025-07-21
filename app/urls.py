@@ -22,6 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('index', views.homepage, name='homepage'),
-    path('contact', views.contact, name='contact'),
+    path('contact/', views.contact, name='contact'),
     path('rock-paper-sciscors', views.rock_paper_sciscor, name='rock_paper_sciscor'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

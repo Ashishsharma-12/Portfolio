@@ -13,7 +13,7 @@ class Projects(models.Model):
     title = models.CharField(max_length=100)
     link = models.CharField(max_length=500)
     img = models.ImageField(upload_to = 'pics')
-    subtitle = models.CharField(max_length=500, null=True)
+    subtitle = models.TextField()
     upath = models.CharField(max_length=500, default= '#')
 
     def __str__(self):
@@ -22,7 +22,7 @@ class Projects(models.Model):
 class Education(models.Model):
     degree = models.CharField(max_length=100)
     college = models.CharField(max_length=100)
-    desc = models.CharField(max_length=500, null=True)
+    desc = models.TextField()
     start_year = models.IntegerField()
     end_year = models.IntegerField()
 
@@ -35,6 +35,8 @@ class Work_Experience(models.Model):
     start_year = models.IntegerField()
     end_year = models.IntegerField()
     job_desc = models.TextField()
+    order = models.IntegerField()
+
 
     def __str__(self):
         return self.company
